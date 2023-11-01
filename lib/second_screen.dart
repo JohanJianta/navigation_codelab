@@ -12,6 +12,8 @@ class SecondScreen extends StatelessWidget {
           onPressed: () {
             // Navigate to the third screen.
             Navigator.popAndPushNamed(context, "/third");
+            // popAndPushNamed mirip seperti pushNamed, hanya saja Navigator sekaligus akan ter-Pop
+            // tujuannya agar pengguna tidak bisa kembali lagi ke page apabila menekan tombol Back
           },
           child: const Text('Go to Third Screen'),
         ),

@@ -11,7 +11,6 @@ class FifthScreen extends StatelessWidget {
         child: ElevatedButton(
           onPressed: () {
             // Return to the first screen.
-            // popAndPush mirip seperti pushNamed
             Navigator.popAndPushNamed(context, "/");
           },
           child: const Text('Go Back to First Screen'),

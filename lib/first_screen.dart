@@ -7,6 +7,7 @@ class FirstScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text('First Screen')),
+      // Navigation bar
       drawer: Drawer(
         child: ListView(
           children: [
@@ -16,10 +17,11 @@ class FirstScreen extends StatelessWidget {
               ),
               child: Text("Navigation Codelab"),
             ),
+            // list navigasi
             ListTile(
               title: const Text('First'),
               onTap: () {
-                Navigator.popAndPushNamed(context, "/");
+                Navigator.pushNamed(context, "/");
               },
             ),
             ListTile(

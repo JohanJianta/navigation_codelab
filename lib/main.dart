@@ -5,9 +5,11 @@ import 'third_screen.dart';
 import 'fourth_screen.dart';
 import 'fifth_screen.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -17,18 +19,20 @@ class MyApp extends StatelessWidget {
       ),
       // set FirstScreen sebagai tampilan awal
       initialRoute: '/',
+      // list Route navigasi
       routes: {
-        // When navigating to the "/" route, build the FirstScreen widget.
+        // Route "/" akan menampilkan FirstScreen widget.
         '/': (context) => const FirstScreen(),
-        // When navigating to the "/second" route, build the SecondScreen widget.
+        // Route "/second" akan menampilkan SecondScreen widget.
         '/second': (context) => const SecondScreen(),
-        // When navigating to the "/third" route, build the SecondScreen widget.
+        // Route "/third" akan menampilkan ThirdScreen widget.
         '/third': (context) => const ThirdScreen(),
-        // When navigating to the "/fourth" route, build the SecondScreen widget.
+        // Route "/fourth" akan menampilkan FourthScreen widget.
         '/fourth': (context) => const FourthScreen(),
-        // When navigating to the "/fifth" route, build the SecondScreen widget.
+        // Route "/fifth" akan menampilkan FifthScreen widget.
         '/fifth': (context) => const FifthScreen(),
       },
+      // Note: jika menggunakan route, Material App tidak boleh menambahkan home, begitu pun sebaliknya
     );
   }
 }

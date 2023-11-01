@@ -11,7 +11,7 @@ class FourthScreen extends StatelessWidget {
         child: ElevatedButton(
           onPressed: () {
             // Navigate to the fifth screen.
-            Navigator.pushNamed(context, "/fifth");
+            Navigator.popAndPushNamed(context, "/fifth");
           },
           child: const Text('Go to Fifth Screen'),
         ),
