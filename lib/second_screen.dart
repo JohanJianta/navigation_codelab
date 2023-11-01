@@ -1,17 +1,19 @@
 import 'package:flutter/material.dart';
 
 class SecondScreen extends StatelessWidget {
+  const SecondScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Second Screen')),
+      appBar: AppBar(title: const Text('Second Screen')),
       body: Center(
         child: ElevatedButton(
           onPressed: () {
-            // Return to the first screen.
-            Navigator.pop(context);
+            // Navigate to the third screen.
+            Navigator.popAndPushNamed(context, "/third");
           },
-          child: Text('Go Back to First Screen'),
+          child: const Text('Go to Third Screen'),
         ),
       ),
     );
